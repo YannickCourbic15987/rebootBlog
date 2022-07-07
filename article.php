@@ -78,9 +78,6 @@ if (isset($_SESSION['connect'])) {
             }
 
             if (isset($_SESSION['mod']) && $article['ID_USER'] !== $_SESSION['ID_USER']) {
-
-
-
                 echo "<div class='mb-4 container-sm justify-content-center'>";
                 echo '<div id ="container' . $i++ . '" class="' . $class1 . '"> ';
                 echo " <h1 class = 'text-center text-primary'> ";
@@ -98,6 +95,22 @@ if (isset($_SESSION['connect'])) {
             } elseif (!isset($_SESSION['mod']) && isset($_SESSION['connect'])) {
                 echo "<div class='mb-4 container-sm justify-content-center'>";
                 echo '<div id ="container' . $i++ . '" class="' . $class . '"> ';
+                echo " <h1 class = 'text-center text-primary'> ";
+                echo $article['nom_article'];
+                echo "</h1>";
+                echo "<p class = 'text-center'>";
+                echo $article['description'];
+                echo "</p>";
+                echo '<img src= ' . "{$article['scr_img']}" . ' class="img-fluid">';
+                echo "<p class = 'text-center'>";
+                echo "date de création : <br>";
+                echo $article['date_article'];
+                echo "</p>";
+                echo "</div>";
+            }
+            if (isset($_SESSION['mod']) && $article['ID_USER'] === $_SESSION['ID_USER'] &&  $article['ID_ARTICLE'] !== (int)$_SESSION['ID_ARTICLE']) {
+                echo "<div class='mb-4 container-sm justify-content-center'>";
+                echo '<div id ="container' . $i++ . '" class="' . $class1 . '"> ';
                 echo " <h1 class = 'text-center text-primary'> ";
                 echo $article['nom_article'];
                 echo "</h1>";

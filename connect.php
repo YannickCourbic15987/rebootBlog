@@ -30,7 +30,7 @@
        
                 <div class='alert alert-info' role='alert'>
                     <p class='text-info'>
-                        Vous êtes  deconnecté avec succés ";
+                        Vous êtes  deconnecté avec succès ";
 
                 echo "
                     </p>
@@ -99,6 +99,7 @@
                 </form>
             </main>
         <?php } ?>
+
         </main>
 
 

@@ -1,9 +1,11 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand">
     <div class="collapse navbar-collapse justify-content-center">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="inscription.php" class="nav-link active"> Inscription </a>
-            </li>
+            <?php if (!isset($_SESSION['connect'])) { ?>
+                <li class="nav-item">
+                    <a href="inscription.php" class="nav-link active"> Inscription </a>
+                </li>
+            <?php   }  ?>
             <?php if (!isset($_SESSION['connect'])) { ?>
                 <li class="nav-item">
                     <a href="connect.php" class="nav-link active"> connexion </a>
